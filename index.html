@@ -1,0 +1,233 @@
+<html>
+    <head>
+
+        <title>My title</title>
+        <script type="text/javascript">
+    
+    //SWITCH CASE 
+   //in JS, switch case can accept numbers, strings, boolean
+        var day = 8;
+        switch(day)
+        {
+            case 1:
+                document.write("<h2>Sunday</h2>");
+                break;
+            case 2:
+                document.write("<h2>Monday</h2>");
+                break;
+            case 3:
+                 document.write("<h2>Tuesday</h2>");
+                 break;
+            case 4:
+                document.write("<h2>Wednesday</h2>");
+                break;
+            case 5:
+                document.write("<h2>Thursday</h2>");
+                break;
+            case 6:
+                document.write("<h2>Friday</h2>");
+                break;
+            case 7:
+                document.write("<h2>Saturday</h2>");
+                break;
+            default:
+                 document.write("<h2>Wrong input</h2>");
+}
+
+
+    //FOR LOOP
+    //For loop is used when the number of iterations is known in advance
+    //entry control loop (condition is checked before it was executed)
+    //3 parts inside for loop:
+    //1. initialization
+    //2. condition
+    //3. increment and decrement
+    var x=2
+    for(;x<=10;x+=2)
+    {
+        document.write("<h2>" +x+ "</h2>");
+
+    }
+ 
+
+    /*WHILE LOOP  
+    The while loop is primarily used when the number of iterations 
+    in not known in advanced and the iterations are based on some boolean condition.
+    */
+
+    var x=1;
+    while(x<10)
+    {
+        document.write("<h1>" +x+"</h1>");
+        x=x+2; //x+=2 
+    }
+
+
+
+/*DO WHILE LOOP
+condition is written inside of while() this condition is gonna be checked after the first iteration 
+EVEN IF THE CONDTION IS FALSE, IT WILL BE EXECUTED FOR THE FIRST TIME 
+EG. DISPLAYING A MENU - THE MENU NEEDS TO BE SHOWN, WHETHER THE CONDITION IS TRUE OR FALSE
+*/
+var x=4;
+do{
+document.write("<h2>Ivana</h2>");
+x--;
+}while(x>5);
+
+
+/*
+FUNCTIONS - block of code which is given a particular name, a set of statements that performs a task or calculates a value
+it is executed when something invokes it or calls it. 
+*/
+
+//sintax of function
+
+function add2Numbers(a, b)
+{
+
+    var total=a + b;
+    return total;
+}
+
+    var output = add2Numbers(5,5); //function call
+
+document.write("<h2>The total is: "+output+"</h2>")
+
+
+//SCOPE OF VARIABLE - 2 types of scopes - global and local (depending where you create your variables)
+
+var b=6;
+var1 ="Ivana"
+function myfunction()
+{
+    var a =5; //local variable = it exists only inside of a function so that's why it is runing inside of it
+    document.write("<h2>"+a+"<h/2>");
+        document.write("<h2>"+b+"<h/2>");
+}
+myfunction();
+
+
+var1 = "Ivana";
+var a=5; //global variable = it runs through intire page and script 
+document.write("<h2>"+a+"<h/2>");
+
+
+
+document.write("<h2>"+a+"<h/2>");
+
+
+
+//ARRAY IN JS = store a multiple list of values under one single name
+//[] - array
+
+var car1="audi";
+var car2="volvo";
+var car3="bmw";
+
+
+
+            //0     //1     //2
+var cars=["bmw", "volvo", "audi"]; //-list of values
+var arr1=new Array("voće", "povrće", "meso"); 
+
+cars.push(3);
+
+
+for(var i=0; i<cars.length; i++)
+{
+    document.write("<h3>" +cars[i]+"</h3>");
+}
+
+
+
+//OBJECTS 
+
+var car_brand="tesla";
+var car_model="model 3";
+var price=10000;
+
+function teslaAutoPilot()
+{
+    document.write("<h3>This car has auto pilot</h3>")
+}
+teslaAutoPilot();
+
+
+//HOW TO CREATE AN OBJECT IN JS 
+
+/*var Car = {
+    car_brand : "tesla", 
+    car_model : "model3",
+    price : 10000,
+
+    teslaAutoPilot : function()
+    { 
+        return "<h2>This car has autopilot</h2>";
+}
+}
+
+document.write("<h3>"+Car.car_brand+"</h3>")
+*/
+
+
+//FUNCTION CONTRUCTOR - template which helps create more objects 
+
+function Cars(car_brand,car_model,price)
+{
+    this.car_brand = car_brand;         //PROPERTIES OF AN OBJECT 
+    this.car_model = car_model;
+    this.price = price;
+    this.teslaAutoPilot = function()
+    {
+        document.write("<h3>This car has auto pilot</h3>")
+    }
+
+}
+
+
+
+var c1 = new Cars("tesla", "model3", 10000);
+var c2 = new Cars("tesla", "model Z", 411000);
+c1.teslaAutoPilot();
+
+document.write("<h2>"+c2.car_model+"</h2>")
+
+
+//everything can be an object - booleans, numbers, strings, dates are always objects, maths are always objects, regular expressions are always objects 
+
+
+var str1 = new String();
+
+var Car= {
+ car_brand:"tesla",
+ car_model:"model 3",
+ price: 10000,
+
+ teslaAutoPilot : function()
+
+{
+    document.write("<h3>This car has auto pilot</h3>");
+}
+}
+
+Car.fuelType="electric"; 
+//delete Car.price; 
+Car.price="10000";
+
+document.write("<h3>"+Car.price+"</h3>");
+
+
+
+        </script> 
+    
+    </head>
+
+
+    <body>
+
+
+    </body>
+
+
+</html>

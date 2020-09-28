@@ -1,0 +1,54 @@
+<html>
+    <head>
+
+        <title>My title</title>
+        <script type="text/javascript">
+
+
+
+//getElementsByTagName 
+function changeStyling()
+{
+    var para = document.getElementsByTagName("p"); //html collections of html paragraph elements, we are not getting only ONE value, but every value - collection 
+    para[0].style.fontSize = 24;
+    para[1].style.color = "red";
+     para[2].style.fontWeight = "bold";
+     para[3].style.fontStyle = "italic";
+
+
+for(var i=0;i<para.length; i++){
+    para[i].style.fontSize = 22;
+
+    
+    
+}
+
+
+}
+
+
+</script>
+
+
+<body>
+
+<!--getElementByTagName     
+-->
+
+<p>This is paragraph 1</p>
+<p>This is paragraph 2</p>
+<p>This is paragraph 3</p>
+<p>This is paragraph 4</p>
+<p>This is paragraph 5</p>
+
+
+<button onclick="changeStyling()">Click me </button>
+
+
+
+
+</body>
+
+
+
+</html>

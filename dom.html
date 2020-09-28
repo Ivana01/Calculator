@@ -1,0 +1,127 @@
+<html>
+    <head>
+
+        <title>My title</title>
+        <script type="text/javascript">
+    
+
+
+    
+//getElementsByTagName 
+function changeStyling()
+{
+    var para = document.getElementsByTagName("p"); //html collections of html paragraph elements, we are not getting only ONE value, but every value - collection 
+    para[0].style.fontSize = 24;
+    para[1].style.color = "red";
+     para[2].style.fontWeight = "bold";
+     para[3].style.fontStyle = "italic";
+
+
+}
+
+
+function buttonClick()
+{
+var str = document.getElementById("heading2").innerHTML; // innerHTML is a predifined property of h2 DOM object - it is a text which the tag holds  
+alert(str);
+}
+
+
+//getElementById 
+function fn()
+{
+    var str = document.getElementById("text1").value;
+    alert ("Value inside the text box is: "+str);
+}
+
+function fn1()
+{
+    var rd1 = document.getElementById("rd1"); //rd1 is referencing input type
+    var rd2 = document.getElementById("rd2");
+
+    if(rd1.checked==true) //checked is a property of rd1 
+    alert("The channel selected is: "+rd1.value); 
+    else if(rd2.checked==true)
+    alert("The channel selected is: "+rd2.value); 
+    else
+    alert("No channel selected");
+}
+
+
+function fn1()
+{
+    var select = document.getElementById("selectbox");
+    alert(select.options[select.selectedIndex].value) //selectedIndex gives dinamically functionality - it is a property   
+}
+
+
+
+
+</script> 
+    
+</head>
+
+
+<body>
+
+
+    <!--getElementByTagName     
+-->
+
+<p>This is paragraph 1</p>
+<p>This is paragraph 2</p>
+<p>This is paragraph 3</p>
+<p>This is paragraph 4</p>
+<p>This is paragraph 5</p>
+
+
+
+
+
+<button onclick="buttonClick()">Click Me</button>
+<h2 id="heading2">Some random text</h2>
+
+-->
+<!--textbox    
+-->
+
+<input id="text1" placeholder="Enter anything">
+<br>
+<button onclick="fn1()">Click me</button>
+
+
+<!--radiobutton    
+-->
+
+<input id="rd1" name="grp1" type="radio" value="Simple">Simple</input>
+<br>
+<input id="rd2" name="grp1" type="radio" value="Ivana Cosic">Ivana Cosic</input>
+
+
+<br>
+<button onclick="fn1()">Click me</button>
+
+
+<!--selectbox    
+-->
+
+<select id="selectbox">
+<option value="Ivana Cosic">Ivana Cosic</option>
+<option value="Ivana Cosic">Ivana Cosic</option>
+<option value="Ivana Cosic">Ivana Cosic</option>
+<option value="Ivana Cosic">Ivana Cosic</option>
+<option value="Ivana Cosic">Ivana Cosic</option>
+
+<button onclick="fn1()">Click me</button>
+
+
+
+<br>
+<button onclick="changeStyling()">Click me</button>
+
+
+
+</body>
+
+
+</html>

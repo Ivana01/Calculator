@@ -1,0 +1,60 @@
+<html>
+    <head>
+
+        <title>My title</title>
+        <script type="text/javascript">
+
+//regular expressions are case sensitive, regular expressions in JS are taken as objects
+//if we need to do checking, we use always if else control statement
+
+function validate()
+{
+    var username = document.getElementById("uname").value;
+    var regx = /E00/;
+    if(regx.test(username))
+    {
+        alert("Valid username");
+
+    }
+    else
+    {
+
+        alert("Invalid username");
+        document.getElementById("lbluser").style.visibility="visible"; 
+    
+    }
+}
+
+
+
+
+</script>
+
+</head>
+
+
+<body>
+
+<form action="Message.html">
+
+
+    <input id="uname" placeholder="Username" type="text"/><br>
+    <label id="lbluser" style="color:red;visibility:hidden">Invalid username</label>
+    
+    <br>
+
+<button onclick="validate()" type="button">Submit</button>
+
+
+
+
+</form>
+    
+</body>
+
+
+
+
+
+
+</html>
